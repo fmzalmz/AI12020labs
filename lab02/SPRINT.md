@@ -2,17 +2,17 @@
 
 ## Sprint Goal
 
-Students can view food options, place an advance order, and select a pickup time.
+Students can view food options and place an advance order even during a temporary food-court internet outage.
 
 ## Selected items
 
 - [F] Students need to view the available food vendors and their current menu items.
 - [F] Students need to place a food order before arriving at the food court.
-- [F] Students need to choose an available pickup time for their order.
+- [NF] Students and vendors need core ordering functions to remain usable during temporary food-court internet outages.
 
 ## Definition of Done
 
 - [ ] A tester can view at least three food vendors and their available menu items.
 - [ ] A tester can submit an order containing at least one available menu item.
-- [ ] A tester can select an available pickup time before submitting the order.
-- [ ] A food vendor can view the submitted order with the correct items and pickup time.
+- [ ] After the internet connection is disabled, a tester can still view menu items and submit an order.
+- [ ] A food vendor can view an order submitted during an outage after the connection returns.

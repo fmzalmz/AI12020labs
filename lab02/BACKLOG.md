@@ -4,6 +4,7 @@ CampusEats helps students order food before reaching the food court so they can 
 
 ## Items
 
+- [NF] Students and vendors need core ordering functions to remain usable during temporary food-court internet outages.
 - [F] Students need to view the available food vendors and their current menu items.
 - [F] Students need to place a food order before arriving at the food court.
 - [F] Students need to choose an available pickup time for their order.
@@ -14,6 +15,8 @@ CampusEats helps students order food before reaching the food court so they can 
 - [NF] Students need their personal and payment information protected from unauthorized access.
 
 ## The change
+
+The food-services manager reported that the food-court Wi-Fi often fails at lunchtime, so CampusEats must keep working during temporary internet outages. I placed this new non-functional item first because the app would otherwise fail during its busiest period. It entered Sprint 1 and displaced pickup-time selection, which remains in the backlog for a later sprint.
 
 ## From the assistant
 
