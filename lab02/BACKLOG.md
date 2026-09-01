@@ -1,6 +1,17 @@
-# Backlog — <product name>
+# Backlog — CampusEats
+
+CampusEats helps students order food before reaching the food court so they can spend less time waiting in queues.
 
 ## Items
+
+- [F] Students need to view the available food vendors and their current menu items.
+- [F] Students need to place a food order before arriving at the food court.
+- [F] Students need to choose an available pickup time for their order.
+- [F] Students need to receive confirmation when their order is accepted and ready for pickup.
+- [F] Food vendors need to update menu availability and order status.
+- [F] Food-court staff need to view active orders in the order they should be prepared.
+- [NF] Students need an order confirmation to appear within two seconds under normal usage.
+- [NF] Students need their personal and payment information protected from unauthorized access.
 
 ## The change
 
