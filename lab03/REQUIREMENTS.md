@@ -38,34 +38,28 @@ short enough to test and trace.
 - UR-8 [Must] CampusPulse can serve a pilot of 5,000 students and 200 groups before Orientation Week. [Source: S4]
 - UR-9 [Should] Students can use CampusPulse through mobile browsers and screen readers. [Source: S1]
 - UR-10 [Must] Attendance data for a cancelled event is deleted within 30 days. [Source: S5]
+- UR-11 [Could] Campus moderators can identify repeated announcements from a compromised group account. [Source: S6]
 
 ## 3. Functional requirements
 
-Write at least six observable system behaviours. Start each one with "The
-system shall" and trace it to one or more user requirements.
-
-Format: `FR-1 [Must] The system shall ... [Source: UR-1]`
-
-- FR-1 [Must] The system shall
-- FR-2 [Must] The system shall
-- FR-3 [Must] The system shall
-- FR-4 [Must] The system shall
-- FR-5 [Must] The system shall
-- FR-6 [Must] The system shall
+- FR-1 [Must] The system shall display announcements and events from verified groups followed by the signed-in student. [Source: UR-1]
+- FR-2 [Must] The system shall hide a student's RSVP identity from the public by default and allow the student to make it public. [Source: UR-2]
+- FR-3 [Must] The system shall allow approved group officers to create and edit drafts, but shall deny publishing attempts by unapproved users. [Source: UR-3]
+- FR-4 [Must] The system shall allow an approved officer to set an event audience as the whole university or group members only. [Source: UR-4]
+- FR-5 [Must] The system shall notify students who RSVP when an approved officer changes an event's place or time. [Source: UR-5]
+- FR-6 [Must] The system shall allow a signed-in user to report an event and record the reported content and reason. [Source: UR-6]
+- FR-7 [Must] The system shall allow a moderator to hide a reported event while preserving its evidence, decision maker, decision time, and appeal record. [Source: UR-6]
+- FR-8 [Must] The system shall display an official badge only after Student Affairs records that the group is verified. [Source: UR-7]
+- FR-9 [Must] The system shall delete RSVP attendance records no later than 30 days after an event is cancelled. [Source: UR-10]
+- FR-10 [Could] The system shall warn a moderator when the same group publishes an identical announcement more than once within 10 minutes. [Source: UR-11]
 
 ## 4. Non-functional requirements
 
-Write at least four measurable quality requirements. State what is measured,
-the target, and the condition under which the target applies. If you introduce
-a number that is not in the handout, record it as an assumption or open
-question in Section 8.
-
-Format: `NFR-1 [Must] The system shall ... [Measure: target and condition] [Source: UR-1]`
-
-- NFR-1 [Must] The system shall
-- NFR-2 [Must] The system shall
-- NFR-3 [Should] The system shall
-- NFR-4 [Must] The system shall
+- NFR-1 [Must] The system shall support the CampusPulse pilot population. [Measure: successfully store and retrieve records for 5,000 student accounts and 200 group profiles during the pre-release load test] [Source: UR-8]
+- NFR-2 [Must] The system shall make the main student journeys accessible. [Measure: zero critical WCAG 2.1 AA failures when browsing events, following groups, and submitting an RSVP using supported mobile browsers and screen readers] [Source: UR-9]
+- NFR-3 [Should] The system shall deliver event-change notifications promptly. [Measure: at least 95% of notifications are delivered within 60 seconds after a place or time correction under normal pilot load] [Source: UR-5]
+- NFR-4 [Must] The system shall respond promptly during Orientation Week. [Measure: at least 95% of page requests complete within 2 seconds while 500 users are active concurrently] [Source: UR-8]
+- NFR-5 [Must] The system shall enforce the attendance-data retention limit. [Measure: 100% of RSVP attendance records are deleted within 30 days after their event is cancelled] [Source: UR-10]
 
 ## 5. User stories and acceptance criteria
 
@@ -136,13 +130,14 @@ requirement, a system requirement, and a user story.
 
 ## 8. Assumptions and open questions
 
-Separate decisions your team has assumed from questions that still need an
-answer.
-
 ### Assumptions
 
-- A1:
+- A1: WCAG 2.1 AA is the assumed accessibility standard because the source notes do not specify a standard.
+- A2: Delivering at least 95% of change notifications within 60 seconds under normal pilot load is an assumed target.
+- A3: The performance test assumes 500 concurrently active users because the Orientation Week peak is unknown.
+- A4: The repeated-announcement warning uses an assumed 10-minute comparison period.
 
 ### Open questions
 
-- Q1:
+- Q1: What peak number of concurrent users should CampusPulse support during Orientation Week?
+- Q2: Which mobile browsers and screen-reader versions must the first release officially support?
