@@ -48,7 +48,7 @@ short enough to test and trace.
 - FR-4 [Must] The system shall allow an approved officer to set an event audience as the whole university or group members only. [Source: UR-4]
 - FR-5 [Must] The system shall notify students who RSVP when an approved officer changes an event's place or time. [Source: UR-5]
 - FR-6 [Must] The system shall allow a signed-in user to report an event and record the reported content and reason. [Source: UR-6]
-- FR-7 [Must] The system shall allow a moderator to hide a reported event while preserving its evidence, decision maker, decision time, and appeal record. [Source: UR-6]
+- FR-7 [Must] The system shall remove a hidden event from all student views immediately and retain the reported content, report reason, moderator identity, decision time, and appeal record for access by authorized moderators. [Source: UR-6]
 - FR-8 [Must] The system shall display an official badge only after Student Affairs records that the group is verified. [Source: UR-7]
 - FR-9 [Must] The system shall delete RSVP attendance records no later than 30 days after an event is cancelled. [Source: UR-10]
 - FR-10 [Could] The system shall warn a moderator when the same group publishes an identical announcement more than once within 10 minutes. [Source: UR-11]
@@ -101,7 +101,7 @@ so that I can limit harm and support a fair appeal.
 Acceptance criteria:
 
 - Given a submitted report, the moderator can view the reported content and the reporter's stated reason.
-- When a moderator hides an event, it is removed from public view while the evidence, moderator identity, decision time, and appeal record remain available to authorized moderators.
+- When a moderator hides an event, it disappears immediately from all student views while the reported content, report reason, moderator identity, decision time, and appeal record remain available to authorized moderators.
 
 ### US-4 [Source: S5, UR-10]
 
@@ -130,7 +130,7 @@ Acceptance criteria:
 | S1: Find events from followed verified groups | UR-1 | FR-1 | US-1 |
 | S1 and S5: Keep RSVP identity private by default | UR-2 | FR-2 | US-1 |
 | S2: Allow only approved officers to publish | UR-3 | FR-3 | US-2 |
-| S3: Hide harmful events while preserving appeal evidence | UR-6 | FR-7 | US-3 |
+| S3: Remove hidden events from student views while retaining appeal evidence | UR-6 | FR-7 | US-3 |
 | S5: Delete attendance data after cancellation | UR-10 | NFR-5 | US-4 |
 
 ## 8. Assumptions and open questions
