@@ -1,8 +1,8 @@
 # CampusPulse requirements
 
-Name or team:
+Name or team: Fatima Al Mazrouei
 
-Date:
+Date: 8 September 2026
 
 Status: working draft
 
@@ -13,31 +13,31 @@ short enough to test and trace.
 
 ### In scope
 
-List at least three capabilities that belong in the first release.
-
--
--
--
+- University sign-in for students, approved group officers, and campus moderators.
+- Verified group profiles with announcements, events, and following.
+- RSVP with private-by-default attendee visibility.
+- University-wide and members-only event audiences.
+- Event corrections and notifications to students who RSVP.
+- Reporting, moderation, evidence records, and appeals.
 
 ### Out of scope
 
-List at least two explicit exclusions.
-
--
--
+- Native mobile applications.
+- Direct messages and access for external users.
+- Payments, video hosting, and AI recommendations.
 
 ## 2. User requirements
 
-Write at least five customer-readable needs. Use one need per line and trace it
-to the stakeholder evidence.
-
-Format: `UR-1 [Must] ... [Source: S1]`
-
-- UR-1 [Must]
-- UR-2 [Must]
-- UR-3 [Must]
-- UR-4 [Must]
-- UR-5 [Must]
+- UR-1 [Must] Students can view announcements and events from verified groups they follow. [Source: S1, S4]
+- UR-2 [Must] Students can RSVP with their identity hidden from the public unless they choose to show it. [Source: S1, S5]
+- UR-3 [Must] Approved group officers can create, edit, and publish announcements and events. [Source: S2]
+- UR-4 [Must] Group officers can limit an event to the whole university or group members. [Source: S2]
+- UR-5 [Must] Students who RSVP receive notice when an event's place or time changes. [Source: S2]
+- UR-6 [Must] Campus moderators can review reports, hide harmful events, and preserve evidence and decision records for appeals. [Source: S3]
+- UR-7 [Must] Only groups checked by Student Affairs can display an official badge. [Source: S4, S6]
+- UR-8 [Must] CampusPulse can serve a pilot of 5,000 students and 200 groups before Orientation Week. [Source: S4]
+- UR-9 [Should] Students can use CampusPulse through mobile browsers and screen readers. [Source: S1]
+- UR-10 [Must] Attendance data for a cancelled event is deleted within 30 days. [Source: S5]
 
 ## 3. Functional requirements
 
