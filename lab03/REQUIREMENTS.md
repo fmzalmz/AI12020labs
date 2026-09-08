@@ -56,77 +56,82 @@ short enough to test and trace.
 ## 4. Non-functional requirements
 
 - NFR-1 [Must] The system shall support the CampusPulse pilot population. [Measure: successfully store and retrieve records for 5,000 student accounts and 200 group profiles during the pre-release load test] [Source: UR-8]
-- NFR-2 [Must] The system shall make the main student journeys accessible. [Measure: zero critical WCAG 2.1 AA failures when browsing events, following groups, and submitting an RSVP using supported mobile browsers and screen readers] [Source: UR-9]
+- NFR-2 [Should] The system shall make the main student journeys accessible. [Measure: zero critical WCAG 2.1 AA failures when browsing events, following groups, and submitting an RSVP using supported mobile browsers and screen readers] [Source: UR-9]
 - NFR-3 [Should] The system shall deliver event-change notifications promptly. [Measure: at least 95% of notifications are delivered within 60 seconds after a place or time correction under normal pilot load] [Source: UR-5]
 - NFR-4 [Must] The system shall respond promptly during Orientation Week. [Measure: at least 95% of page requests complete within 2 seconds while 500 users are active concurrently] [Source: UR-8]
 - NFR-5 [Must] The system shall enforce the attendance-data retention limit. [Measure: 100% of RSVP attendance records are deleted within 30 days after their event is cancelled] [Source: UR-10]
 
 ## 5. User stories and acceptance criteria
 
-Write at least three stories from different stakeholder viewpoints. Each story
-needs at least two acceptance criteria. Across the set, include a failure,
-permission boundary, privacy rule, or other non-happy path.
+### US-1 [Source: S1, UR-1, UR-2]
 
-### US-1 [Source: S?, UR-?]
+As a student attendee,
 
-As a <role>,
+I want to find events from groups I follow and RSVP privately,
 
-I want <capability>,
-
-so that <benefit>.
+so that I can participate without exposing my identity.
 
 Acceptance criteria:
 
--
--
+- Given that a student follows a verified group, when the student opens the event feed, then that group's available events are displayed.
+- Given that a student submits an RSVP, then the student's name is absent from the public attendee list unless the student explicitly chooses public visibility.
 
-### US-2 [Source: S?, UR-?]
+### US-2 [Source: S2, UR-3, UR-4, UR-5]
 
-As a <role>,
+As a group officer,
 
-I want <capability>,
+I want approved officers to prepare and publish events for a chosen audience,
 
-so that <benefit>.
-
-Acceptance criteria:
-
--
--
-
-### US-3 [Source: S?, UR-?]
-
-As a <role>,
-
-I want <capability>,
-
-so that <benefit>.
+so that the correct students receive accurate event information.
 
 Acceptance criteria:
 
--
--
+- Given two approved officers, one can save a draft and the other can edit and publish it to the selected university-wide or members-only audience.
+- Given an unapproved user, when that user attempts to publish an event, then publishing is denied and the event remains unavailable to students.
+- Given students who RSVP, when an approved officer changes the event's place or time, then at least 95% receive a notification within 60 seconds under normal pilot load.
+
+### US-3 [Source: S3, UR-6]
+
+As a campus moderator,
+
+I want to hide a reported event while preserving its evidence,
+
+so that I can limit harm and support a fair appeal.
+
+Acceptance criteria:
+
+- Given a submitted report, the moderator can view the reported content and the reporter's stated reason.
+- When a moderator hides an event, it is removed from public view while the evidence, moderator identity, decision time, and appeal record remain available to authorized moderators.
+
+### US-4 [Source: S5, UR-10]
+
+As the Data Protection Officer,
+
+I want cancelled-event attendance data deleted within 30 days,
+
+so that CampusPulse follows its privacy and retention obligations.
+
+Acceptance criteria:
+
+- When an event is cancelled, its RSVP attendance records receive a deletion deadline no later than 30 days after cancellation.
+- After the deadline passes, an authorized attendance-data search returns no RSVP attendance records for that event.
 
 ## 6. MoSCoW summary
 
-List requirement or story IDs in every category. The Won't category must state
-what is excluded from this release.
-
-- Must:
-- Should:
-- Could:
-- Won't this release:
+- Must: UR-1 to UR-8, UR-10, FR-1 to FR-9, NFR-1, NFR-4, NFR-5, and US-1 to US-4.
+- Should: UR-9, NFR-2, and NFR-3.
+- Could: UR-11 and FR-10.
+- Won't this release: Native mobile applications; direct messages; external-user access; payments; video hosting; and AI recommendations.
 
 ## 7. Traceability
 
-Add at least four complete paths. Every row should connect evidence to a user
-requirement, a system requirement, and a user story.
-
 | Stakeholder need | User requirement | System requirement | User story |
 |---|---|---|---|
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| S1: Find events from followed verified groups | UR-1 | FR-1 | US-1 |
+| S1 and S5: Keep RSVP identity private by default | UR-2 | FR-2 | US-1 |
+| S2: Allow only approved officers to publish | UR-3 | FR-3 | US-2 |
+| S3: Hide harmful events while preserving appeal evidence | UR-6 | FR-7 | US-3 |
+| S5: Delete attendance data after cancellation | UR-10 | NFR-5 | US-4 |
 
 ## 8. Assumptions and open questions
 
