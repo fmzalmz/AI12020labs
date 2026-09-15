@@ -114,7 +114,7 @@ Observed result and why it agrees with the contract: Valid JSON returned 201 wit
 
 ## Submission
 
-- Final commit hash (`Complete lab04 playlist`): TODO
+- Final commit hash (`Complete lab04 playlist`): `895364d`
 - Files included and review notes: `REPORT.md`, `backend.py`, `index.html`, `README.md`, and `.gitignore`; syntax, whitespace, backend validation, frontend submission, and browser behavior reviewed.
-- Push and GitHub verification: TODO
+- Push and GitHub verification: Pushed the Lab 4 commits to `course/main`; verified by the successful push output and the `lab04` folder on GitHub.
 - Optional stretch, if attempted: Not attempted.
